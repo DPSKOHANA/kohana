@@ -3,25 +3,25 @@
 	url = git@github.com:DPSKOHANA/core.git
 [submodule "modules/codebench"]
 	path = modules/codebench
-	url = http://github.com/kohana/codebench.git
+	url = git@github.com:DPSKOHANA/codebench.git
 [submodule "modules/database"]
 	path = modules/database
-	url = http://github.com/kohana/database.git
+	url = git@github.com:DPSKOHANA/database.git
 [submodule "modules/image"]
 	path = modules/image
-	url = http://github.com/kohana/image.git
+	url = git@github.com:DPSKOHANA/image.git
 [submodule "modules/orm"]
 	path = modules/orm
-	url = http://github.com/kohana/orm.git
+	url = git@github.com:DPSKOHANA/orm.git
 [submodule "modules/auth"]
 	path = modules/auth
-	url = http://github.com/kohana/auth.git
+	url = git@github.com:DPSKOHANA/auth.git
 [submodule "modules/userguide"]
 	path = modules/userguide
-	url = http://github.com/kohana/userguide.git
+	url = git@github.com:DPSKOHANA/userguide.git
 [submodule "modules/cache"]
 	path = modules/cache
-	url = http://github.com/kohana/cache.git
+	url = git@github.com:DPSKOHANA/cache.git
 [submodule "modules/unittest"]
 	path = modules/unittest
-	url = http://github.com/kohana/unittest.git
+	url = git@github.com:DPSKOHANA/unittest.git
