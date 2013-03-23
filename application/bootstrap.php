@@ -82,8 +82,11 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/',
+	'base_url'	=> '/bbs/kohana/',
+	'errors'	=> TRUE,
 ));
+
+require APPPATH.'../keys.php';
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
