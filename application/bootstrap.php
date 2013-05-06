@@ -5,13 +5,10 @@
 // Load the core Kohana class
 require SYSPATH.'classes/kohana/core'.EXT;
 
-if (is_file(APPPATH.'classes/kohana'.EXT))
-{
+if(is_file(APPPATH.'classes/kohana'.EXT)) {
 	// Application extends the core
 	require APPPATH.'classes/kohana'.EXT;
-}
-else
-{
+} else {
 	// Load empty core extension
 	require SYSPATH.'classes/kohana'.EXT;
 }
@@ -61,8 +58,7 @@ I18n::lang('zh-cn');
  * Note: If you supply an invalid environment name, a PHP warning will be thrown
  * saying "Couldn't find constant Kohana::<INVALID_ENV_NAME>"
  */
-if (isset($_SERVER['KOHANA_ENV']))
-{
+if(isset($_SERVER['KOHANA_ENV'])) {
 	Kohana::$environment = constant('Kohana::'.strtoupper($_SERVER['KOHANA_ENV']));
 }
 
@@ -81,10 +77,12 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  caching     enable or disable internal caching                 FALSE
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
-Kohana::init(array(
-	'base_url'	=> '/bbs/kohana/',
-	'errors'	=> TRUE,
-));
+Kohana::init(
+	array(
+		'base_url' => '/bbs/kohana/',
+		'errors'   => TRUE,
+	)
+);
 
 require APPPATH.'../keys.php';
 
@@ -101,23 +99,26 @@ Kohana::$config->attach(new Config_File);
 /**
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
-Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	));
+Kohana::modules(
+	array(// 'auth'       => MODPATH.'auth',       // Basic authentication
+		// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
+		// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
+		// 'database'   => MODPATH.'database',   // Database access
+		// 'image'      => MODPATH.'image',      // Image manipulation
+		// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+		// 'unittest'   => MODPATH.'unittest',   // Unit testing
+		// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	)
+);
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')
-	->defaults(array(
-		'controller' => 'welcome',
-		'action'     => 'index',
-	));
+	->defaults(
+		array(
+			'controller' => 'welcome',
+			'action'     => 'index',
+		)
+	);
